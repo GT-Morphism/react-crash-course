@@ -36,8 +36,6 @@ function App() {
     return data as TasksType;
   };
 
-  fetchTask(1);
-
   // Add Task
   const addTask = async (task: TaskType) => {
     // NOTE Used before using json-server
