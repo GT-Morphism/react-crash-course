@@ -1,4 +1,5 @@
 import Button from "./Button";
+import { useLocation } from "react-router-dom";
 import { ToggleAddTask } from "../types/types";
 
 const Header = ({
@@ -10,10 +11,13 @@ const Header = ({
   toggleAddTask: ToggleAddTask;
   showAdd: boolean;
 }) => {
+  const location = useLocation();
   return (
     <header className="header">
       <h1>{title}</h1>
-      <Button text={showAdd ? "Close" : "Add"} onClick={toggleAddTask} />
+      {location.pathname === "/" && (
+        <Button text={showAdd ? "Close" : "Add"} onClick={toggleAddTask} />
+      )}
     </header>
   );
 };

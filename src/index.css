@@ -112,10 +112,6 @@ body {
   outline: 2px solid var(--clr-primary);
 }
 
-.form-control-warning > input:focus-visible {
-  outline-color: red;
-}
-
 .form-control label {
   display: block;
 }
